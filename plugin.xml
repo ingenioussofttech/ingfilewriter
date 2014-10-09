@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.ingenioussofttech.InGFileWriter"
+        version="0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <name>InGFileWriter</name>
+    
+    <js-module name="InGFileWriter"
+               src="www/InGFileWriter.js">
+        <clobbers target="cordova.plugins.InGFileWriter" />
+    </js-module>
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="InGFileWriter">
+                <param name="ios-package" value="InGFileWriter" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/InGFileWriter.h" />
+        <source-file src="src/ios/InGFileWriter.m" />
+
+       
+
+    </platform>
+</plugin>
